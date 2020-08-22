@@ -1,0 +1,9 @@
+flask
+flask-bootstrap
+flask-script
+flask-wtf
+bokeh==0.12.5
+pandas
+gunicorn
+pandas
+selenium

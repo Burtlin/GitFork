@@ -1,0 +1,4 @@
+Kerosene.egg-info/
+build/
+dist/
+*.pyc

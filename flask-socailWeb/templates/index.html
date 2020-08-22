@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}粉絲專頁分析器{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>{% if state %}{{ state }}{% else %}新增預追蹤的新粉絲專頁{% endif %}</h1>
+</div>
+<form method="POST">
+    
+    {{ form.hidden_tag() }} 
+    <div class="form-group">
+        <div class="form-group">
+            {{ form.account.label}} {{ form.account(class="form-control",placeholder="帳號")}}
+        </div>
+        <div class="form-group">
+            {{ form.code.label }} {{ form.code(class="form-control",placeholder="密碼")}}
+        </div>
+        <div class="form-group">
+            {{ form.want.label }} {{ form.want(class="form-control",placeholder="關鍵字")}}
+        </div>
+        <div class="form-group">
+            {{ form.order.label }} {{ form.order(class="form-control",placeholder="排名")}}
+        </div>
+        <div class="form-group">
+            {{ form.daylength.label }} {{ form.daylength(class="form-control",placeholder="天數")}}
+        </div>
+
+    </div>
+    {{ form.submit(class="btn btn-primary") }}
+</form>
+
+
+
+{% endblock %}
